@@ -8,6 +8,10 @@ public class Rekursion {
         Was sind mögliche Fehler, die bei unvorsichtiger Verwendung
         von rekursiven Methoden auftreten können?
         Wie können solche Fehler vermieden werden?
+
+        Antwort: Mögliche Fehler die bei der Implementierung von rekursiven Funktionen entstehen können sind eine
+        falsche Implementation eines rekursiven Aufrufs, der falsche Umgang mit Indices, was zu einem unendlich
+        laufenden Funktionsaufruf führen kann, und das Vergessen einer Abbruchbedingung.
          */
 
 
@@ -34,7 +38,14 @@ public class Rekursion {
 
         /*
         Praxisbezug: Wann sind rekursive Methoden iterativen Methoden vorzuziehen?
+
+
+        Antwort: Eine rekursive Methode ist dann zu bevorzugen, wenn die Lösung eines Problems eine in sich selbst
+        geschachtelte Struktur besitzt.
          */
+
+
+        System.out.println(euklid(187, 23));
 
     }
     public static void berechneTeiler(int wert, int teiler){
@@ -69,6 +80,19 @@ public class Rekursion {
         }
         zählen1(i + 1, arr);
         System.out.println(arr[i]);
+    }
+
+    public static int euklid(int a, int b){
+        if(a == b){
+            return a;
+        }
+        else if(a > b){
+            return euklid(a-b, b);
+        }
+        else if(a < b){
+            return euklid(a, b-a);
+        }
+        return 1;
     }
 
 }

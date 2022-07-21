@@ -32,7 +32,7 @@ public class Strings {
 
         /*
         Zur besseren Lesbarkeit soll die Datei textfile.txt so formatiert werden,
-        dass nach jedem Punkt, der nicht zu einem Datum gehört, ein Zeilenumbruch
+        dass nach jedem Punkt ein Zeilenumbruch
         eingefügt wird.
          */
         String output = insertLineBreaks(input);
